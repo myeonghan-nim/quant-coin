@@ -69,11 +69,10 @@ def at_this_is_the_time(df: pd.DataFrame) -> str:
                 all_time_low, all_time_low_date = None, None
                 bought_price, last_bought_date = None, None
     print(f'-> Calculate Timing Finished.')
-    result = ''
-    result += f'-> Previous book: Is Bought({bought_price}), Bought Date({last_bought_date}),' + ' '
-    result += f'All Time High({all_time_high}), All Time High Date({all_time_high_date}),' + ' '
-    result += f'All Time Low({all_time_low}), All Time Low Date({all_time_low_date})'
-    print(result)
+    print('-> Previous book:')
+    print(f'Is Bought({bought_price}), Bought Date({last_bought_date})')
+    print(f'All Time High({all_time_high}), All Time High Date({all_time_high_date})')
+    print(f'All Time Low({all_time_low}), All Time Low Date({all_time_low_date})')
     return 'NOW' if bought_price is not None and last_bought_date is not None else 'NOT NOW'
 
 
@@ -82,15 +81,15 @@ def main(include_eth: bool = False, bool_calculate_profit: bool = False) -> None
     if include_eth:
         targets.append('ETH')
 
-    print(f'{"Processing Started.":=^128}')
+    print(f'{"Processing Started.":=^96}')
     tickers = bb.get_tickers()
     for ticker in tickers:
         if ticker in targets:
             df = cutoff_df(bb.get_candlestick(ticker))
             if bool_calculate_profit or True:
-                print('->', calculate_profit(df))
+                print(calculate_profit(df))
             result = f'{ticker}: {at_this_is_the_time(df)}'
-            print(f'{result:=^128}')
+            print(f'{result:=^96}')
 
 
 if __name__ == '__main__':
