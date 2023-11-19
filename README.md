@@ -29,14 +29,12 @@
 
 ```bash
 $ python main.py -h
-usage: main.py [-h] -t {daily} [--include-ETH] [--calculate-profit]
+usage: main.py [-h] [--include-ETH] [--calculate-profit]
 
 Process command line arguments.
 
 options:
   -h, --help            show this help message and exit
-  -t {daily}, --type {daily}
-                        Choosed zipped data type.
   --include-ETH         Include ETH in the result.
   --calculate-profit    Include calculated profit in the result.
 ```
