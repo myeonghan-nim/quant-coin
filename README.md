@@ -4,25 +4,25 @@
 
 ### 1. How to install
 
-0. Install Python which version is over 3.10.9.
+0. Install Python which version is over 3.12.x.
 1. Clone repository somewhere into your computer.
-    ```bash
-    $ git clone https://github.com/myeonghan-nim/quant-coin.git
-    ```
+   ```bash
+   $ git clone https://github.com/myeonghan-nim/quant-coin.git
+   ```
 2. Go into cloned folder.
 3. Make virtual environment.
-    ```bash
-    $ python -m venv venv
-    ```
+   ```bash
+   $ python -m venv venv
+   ```
 4. Activate environment.
-    ```bash
-    $ source venv/bin/activate # in macOS/Linux
-    $ venv/Scripts/activate.bat # in Windows
-    ```
+   ```bash
+   $ source venv/bin/activate # in macOS/Linux
+   $ venv/Scripts/activate.bat # in Windows
+   ```
 5. Install dependencies using pip.
-    ```bash
-    $ pip install -r requirements.txt --no-cache-dir
-    ```
+   ```bash
+   $ pip install -r requirements.txt --no-cache-dir
+   ```
 6. Run code.
 
 ### 2. How to use
