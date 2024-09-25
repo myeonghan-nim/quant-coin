@@ -58,9 +58,9 @@ def at_this_is_the_time(df: pd.DataFrame) -> str:
 
 
 def main(include_eth: bool = False, calculate_profit_now: bool = False) -> None:
-    symbols = ["BTC"]
+    symbols = ["BTC/KRW"]
     if include_eth:
-        symbols.append("ETH")
+        symbols.append("ETH/KRW")
 
     print(f'{"Processing Started.":=^96}')
     bithumb = ccxt.bithumb()
